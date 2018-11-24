@@ -17,7 +17,7 @@ vector<ii>v[505]; //egde start from i
 vector<Edge> ve;
 int d[505];
 
-bool Bellman( {
+bool Bellman() {
 	memset(d,INF,sizeof(d));
 	d[1]=0; //把1當起點
 
