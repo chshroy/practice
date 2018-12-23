@@ -1,0 +1,63 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+typedef unsigned long long ull;
+typedef pair<string,int> ii;
+
+#define IOS() cin.tie(0); cout.tie(0); ios_base::sync_with_stdio(0);
+#define x first
+#define y second
+#define pb push_back
+#define rep(i, a, n) for(int i=a;i<n;++i)
+#define rep0(i, n) rep(i, 0, n)
+#define rep1(i, n) rep(i, 1, n+1)
+#define INF 2147483647
+
+int main() {
+	int n; 
+	string s;
+	cin>>n>>s;
+	int len = s.length();
+	ii ans; //first string , second time
+	ans = ii(s, 1);
+	int cur = 0, cnt = 0;
+	string curs = "";
+	for(int i=1;i<=len/2;i++) {
+		curs = "", cnt = 0;
+		rep0(j, len-i+1) {
+			if(s[j]==s[j+i] && j!=len-i) {
+				curs+=s[j];
+				cnt++;
+			}
+			else {
+				/*
+				10
+				abaaaabaaaabaaaabaaa
+				*/
+				//cout<<i<<" "<<cnt<<" "<<curs<<endl;
+				if(cnt == 0 ||cnt/i+1<ans.y) {
+					curs = "", cnt = 0; continue;
+				} 
+				string check = curs.substr(0,i);
+				
+				for(int k=0;k<=cnt%i;k++) {
+					check = min(check, curs.substr(k,i));
+				}
+				cnt = cnt/i+1;
+				if(cnt > ans.y) {
+					ans = {check, cnt};
+				}
+				else if(cnt==ans.y && ans.x.length() < i) {
+					ans.x = check;
+				}
+				else if(cnt==ans.y  && ans.x.length() == i) {
+					ans.x = min(ans.x, check);
+				}
+				curs = "", cnt = 0;
+			}
+		}
+	}
+	cout<<ans.x<<endl;
+	cout<<ans.y<<endl;
+}
