@@ -2,7 +2,7 @@ struct DSU {
     int p[maxn], sz[maxn];
     
     void init() {
-        rep0(i, n) p[i] = i, sz[i] = 1;
+        for(int i = 0; i < maxn; ++i) p[i] = i, sz[i] = 1;
     }    
     
     int find(int x) {
@@ -13,6 +13,6 @@ struct DSU {
         // x, y must be parent
         if(sz[x] < sz[y]) swap(x, y);
         p[y] = x;
-        sz[y] += x;
+        sz[x] += sz[y];
     }
 } dsu;
