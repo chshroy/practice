@@ -1,3 +1,5 @@
+// dinic.s 起點 dinic.t終點
+// dinic.max_flow() 
 const int maxn = 1e6;
 
 struct edge {
