@@ -1,7 +1,7 @@
 struct DSU {
     int p[maxn], sz[maxn];
     
-    void init() {
+    DSU() {
         for(int i = 0; i < maxn; ++i) p[i] = i, sz[i] = 1;
     }    
     
