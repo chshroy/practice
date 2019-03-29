@@ -1,22 +1,45 @@
-#include<bits/stdc++.h>
+/*input 
+*/
+#define rrr
+%:include <bits/stdc++.h>
+%:include <ext/pb_ds/assoc_container.hpp>
+%:include <ext/rope>
 using namespace std;
+using namespace __gnu_pbds;
+using namespace __gnu_cxx;
 
 typedef long long ll;
 typedef unsigned long long ull;
-typedef pair<ll, ll> ii;
-#define rep(i, a, n) for(int i = a; i < n; ++i)
-#define rep0(i, n) rep(i, 0, n)
-#define rep1(i, n) rep(i, 1, n+1)
-#define fs first
-#define sc second
-#define pb push_back
-#define eb emplace_back
-#define IOS cin.tie(0); cout.tie(0); ios_base::sync_with_stdio(0);
-#define _ << " " << 
-#define wer(x) cout << (#x) << "->" << (x) << endl;
-#define int ll
-//////////////////////////////////////////////////////////////////
+typedef pair<ll,ll> ii;
+typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> Treap;
+%:define rep(i, a, n) for(int i = 0; i < n; ++i)
+%:define rep0(i, n) rep(i, 0, n)
+%:define rep1(i, n) rep(i, 1, n + 1)
+%:define SZ(a) (int)a.size()
+%:define ALL(a) a.begin(),a.end()
+%:define fs first
+%:define sc second
+%:define pb push_back
+%:define eb emplace_back
+%:define endl '\n'
+%:ifdef rrr
+%:define wer(...) if(1) <%cerr<<__LINE__<<") "<<__PRETTY_FUNCTION__<<" "<<(#__VA_ARGS__)<<" = ";_do(__VA_ARGS__);%>
+template<typename T> void _do(T &&_x)<%cerr<<_x<<endl;%>
+template<typename T,typename ...S> void _do(T &&_x,S &&..._t)<%cerr<<_x<<", ";_do(_t...);%>
+template<typename _a,typename _b> ostream& operator << (ostream &_s,const pair<_a,_b> &_p)<%return _s<<"("<<_p.X<<","<<_p.Y<<")";%>
+template<typename It> ostream& _OUTC(ostream &_s,It _ita,It _itb) <%_s<<"{"; for(It _it=_ita;_it!=_itb;_it++) _s<<(_it==_ita?"":", ")<<*_it; _s<<"}"; return _s;%>
+template<typename _a> ostream &operator << (ostream &_s,vector<_a> &_c)<%return _OUTC(_s,ALL(_c));%>
+template<typename _a> ostream &operator << (ostream &_s,set<_a> &_c)<%return _OUTC(_s,ALL(_c));%>
+template<typename _a,typename _b> ostream &operator << (ostream &_s,map<_a,_b> &_c)<%return _OUTC(_s,ALL(_c));%>
+template<typename _t> void pary(_t _a,_t _b)<%_OUTC(cerr,_a,_b);cerr<<endl;%>
+%:define IOS
+%:else
+%:define wer(...)
+%:define pary(...)
+%:define IOS cin.tie(0); ios_base::sync_with_stdio(0);
+%:endif
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 signed main() {
-	
+	IOS
 }
