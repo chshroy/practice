@@ -1,0 +1,9 @@
+might have to #include<ciso646>
+alternative primary | alternative primary | alternative primary
+--------------------+---------------------+--------------------
+   <%          {    |    and         &&   |    and_eq      &=
+   %>          }    |    bitor       |    |    or_eq       |=
+   <:          [    |    or          ||   |    xor_eq      ^=
+   :>          ]    |    xor         ^    |    not         !
+   %:          #    |    compl       ~    |    not_eq      !=
+   %:%:        ##   |    bitand      &    |
