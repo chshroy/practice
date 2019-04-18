@@ -1,29 +1,33 @@
 /*input
-
 */
-%:include <bits/stdc++.h>
-%:include <ext/pb_ds/assoc_container.hpp>
-%:include <ext/rope>
+#pragma comment(linker, "/stack:200000000")
+#pragma GCC optimize("Ofast")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
+
+#include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
 using namespace std;
 using namespace __gnu_pbds;
-using namespace __gnu_cxx;
 
-typedef long long ll;
-typedef unsigned long long ull;
-typedef pair<ll,ll> ii;
+using ii = pair<int, int>;
+using ll = long long;
+using ull = unsigned long long;
+
+#define int long long
 typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> Treap;
-%:define rep(i, a, n) for(int i = a; i < n; ++i)
-%:define rep0(i, n) rep(i, 0, n)
-%:define rep1(i, n) rep(i, 1, n + 1)
-%:define SZ(a) (int)a.size()
-%:define ALL(a) a.begin(),a.end()
-%:define fs first
-%:define sc second
-%:define pb push_back
-%:define eb emplace_back
-%:define endl '\n'
-%:ifdef rrr
-%:define wer(...) if(1) <%cerr<<__LINE__<<") "<<__PRETTY_FUNCTION__<<" "<<(#__VA_ARGS__)<<" = ";_do(__VA_ARGS__);%>
+#define rep(i, a, n) for(int i = a; i < n; ++i)
+#define rep0(i, n) rep(i, 0, n)
+#define rep1(i, n) rep(i, 1, n + 1)
+#define SZ(a) (int)a.size()
+#define ALL(a) a.begin(),a.end()
+#define fs first
+#define sc second
+#define pb push_back
+#define eb emplace_back
+#define endl '\n'
+#define INF INT_MAX
+#ifdef rrr
+#define wer(...) if(1) <%cerr<<__LINE__<<") "<<__PRETTY_FUNCTION__<<" "<<(#__VA_ARGS__)<<" = ";_do(__VA_ARGS__);%>
 template<typename T> void _do(T &&_x)<%cerr<<_x<<endl;%>
 template<typename T,typename ...S> void _do(T &&_x,S &&..._t)<%cerr<<_x<<", ";_do(_t...);%>
 template<typename _a,typename _b> ostream& operator << (ostream &_s,const pair<_a,_b> &_p)<%return _s<<'('<<_p.fs<<','<<_p.sc<<')';%>
@@ -32,10 +36,10 @@ template<typename _a> ostream &operator << (ostream &_s,vector<_a> &_c)<%return 
 template<typename _a> ostream &operator << (ostream &_s,set<_a> &_c)<%return _OUTC(_s,ALL(_c));%>
 template<typename _a,typename _b> ostream &operator << (ostream &_s,map<_a,_b> &_c)<%return _OUTC(_s,ALL(_c));%>
 template<typename _t> void pary(_t _a,_t _b)<%_OUTC(cerr,_a,_b);cerr<<endl;%>
-%:define IOS
-%:else
-%:define wer(...)
-%:define pary(...)
-%:define IOS cin.tie(0); ios_base::sync_with_stdio(0);
-%:endif
+#define IOS
+#else
+#define wer(...)
+#define pary(...)
+#define IOS cin.tie(0); ios_base::sync_with_stdio(0);
+#endif
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
