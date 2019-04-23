@@ -9,11 +9,13 @@
 using namespace std;
 using namespace __gnu_pbds;
 
+#define int long long
+
 using ii = pair<int, int>;
 using ll = long long;
 using ull = unsigned long long;
 
-#define int long long
+
 typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> Treap;
 #define rep(i, a, n) for(int i = a; i < n; ++i)
 #define rep0(i, n) rep(i, 0, n)
