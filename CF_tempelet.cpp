@@ -1,5 +1,4 @@
 /*input
-
 */
 #pragma comment(linker, "/stack:200000000")
 #pragma GCC optimize("Ofast")
@@ -18,9 +17,9 @@ using ull = unsigned long long;
 using Treap =  tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update>;
 
 #define for_(i, a, n) for(int i = a; i < n; ++i)
-#define for_r(i, n) for(int i = n - 1; i >= 0; ++i)
-#define for_0(i, n) for_(i, 0, n)
-#define for_1(i, n) for_(i, 1, n + 1)
+#define forr(i, n) for(int i = n - 1; i >= 0; ++i)
+#define for0(i, n) for_(i, 0, n)
+#define for1(i, n) for_(i, 1, n + 1)
 
 #define SZ(a) (int)a.size()
 #define ALL(a) a.begin(),a.end()
@@ -38,14 +37,14 @@ template<class T, class U> void _W(const pair<T, U> &x) { _W(x.fs); putchar(' ')
 template<class T> void _W(const vector<T> &x) { for (auto i = x.begin(); i != x.end(); _W(*i++)) if (i != x.cbegin()) putchar(' '); }
 
 #ifdef rrr
-#define wer(...) if(1) {															    \
+#define wer(...) if(1) {                                                                \
     fprintf(stderr, "%s - %d (%s) = ", __PRETTY_FUNCTION__, __LINE__, #__VA_ARGS__);    \
-    _do(__VA_ARGS__);																    \
+    _do(__VA_ARGS__);                                                                   \
 }
 template<typename T>void _do(T &&_x){ cerr << _x << endl; }
 template<typename T, typename ...S> void _do(T &&_x, S &&..._t){ cerr << _x << " ," ; _do(_t...); }
 template<typename _a,typename _b> ostream& operator << (ostream &_s, const pair<_a, _b> &_p) {
-	return _s<<"("<<_p.X<<","<<_p.Y<<")";
+    return _s<<"("<<_p.X<<","<<_p.Y<<")";
 }
 template<typename It> ostream& _OUTC(ostream &_s, It _ita, It _itb)
 {
@@ -70,11 +69,11 @@ template<typename _t> void pary(_t _a, _t _b){ _OUTC(cerr, _a, _b); cerr << endl
 
 /* 多筆測資 
 CASET {
-	cout << cs << endl;
+    cout << cs << endl;
 }
 */
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 signed main() {
-
+    for0(i, n)
 }
