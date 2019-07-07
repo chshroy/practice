@@ -1,6 +1,9 @@
 //RMQ Sparse table
 #define p2(i) (1<<(i))
 
+const int maxn = 2e5 + 50;
+int rm[maxn][__lg(maxn)];
+
 void build_RMQ() {  //build RMQ from a array
 	rep0(i,n) rm[i][0] = a[i];
 	rep1(k,__lg(n))
