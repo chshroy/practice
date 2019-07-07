@@ -16,7 +16,7 @@ struct DSU {
         x = find(x), y = find(y);
         return x == y;
     }
-    void uni(const int &x, const int &y) {
+    void uni(int &x, int &y) {
         // x, y must be parent
         if(sz[x] < sz[y]) swap(x, y);
         p[y] = x;
