@@ -1,4 +1,4 @@
-// FileReader<131072> read(stdin);
+// FileReader<> read(stdin);
 #ifndef IO_H_
 #define IO_H_
 
