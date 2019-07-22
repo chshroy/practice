@@ -1,28 +1,21 @@
-/*input
-*/
-#pragma comment(linker, "/stack:200000000")
+
 #pragma GCC optimize("Ofast")
-#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
 
 #include <bits/stdc++.h>
-#include <ext/pb_ds/assoc_container.hpp>
 using namespace std;
-using namespace __gnu_pbds;
 
 #define int long long
-
 using ii = pair<int, int>;
 using ll = long long;
 using ull = unsigned long long;
-using Treap =  tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update>;
 
 #define for_(i, a, n) for(int i = a; i < n; ++i)
 #define forr(i, n) for(int i = n - 1; i >= 0; ++i)
 #define for0(i, n) for_(i, 0, n)
 #define for1(i, n) for_(i, 1, n + 1)
 
-#define SZ(a) (int)a.size()
-#define ALL(a) a.begin(),a.end()
+#define sz(a) (int)a.size()
+#define all(a) a.begin(),a.end()
 #define PI acos(-1.0)
 #define fs first
 #define sc second
@@ -32,9 +25,41 @@ using Treap =  tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistic
 #define INF INT_MAX
 #define CASET int ___T; cin >> ___T; for_1(cs, ___T)
 
-template<class T> void _W(const T &x) { cout << x; }
-template<class T, class U> void _W(const pair<T, U> &x) { _W(x.fs); putchar(' '); _W(x.sc);}
-template<class T> void _W(const vector<T> &x) { for (auto i = x.begin(); i != x.end(); _W(*i++)) if (i != x.cbegin()) putchar(' '); }
+namespace input {
+	template<typename T> void re(T&& t) { cin >> t; }
+	template<typename T1, typename T2>									// pair
+	void re(pair<T1, T2> &&t) { re(t.first); re(t.second); }
+
+	template<typename T>
+	void re(int &&n, vector<T> &&v) {									// vector
+		re(n); v.reserve(n); for(int i = 0; i < n; re(v[i++]));
+	}
+
+	template<typename T, typename... Args> 
+	void re(T&& t, Args&&... args) { re(t); re(args...); }
+}
+
+namespace output {
+	template<typename T> void ou(T&& t) { cout << t; }
+	template<typename T1, typename T2>									// pair
+	void ou(pair<T1, T2> &&t) { ou(t.first); ou(t.second); }
+
+	template<typename T>
+	void ou(vector<T> &v) {												// vector
+		for(int i = 0; i < (int)v.size(); ou(v[i++])) if(i) ou(' ');
+	}
+
+	template<typename T, typename... Args> 
+	void ou(T&& t, Args&&... args) { ou(t, ' '); ou(args...); }
+};
+using namespace input;
+using namespace output;
+/*
+input(a, b, c);
+input(n, v); // v is vector
+output(a, b, c);
+output(v);
+*/
 
 #ifdef rrr
 #define wer(...) if(1) {                                                                \
@@ -66,14 +91,8 @@ template<typename _t> void pary(_t _a, _t _b){ _OUTC(cerr, _a, _b); cerr << endl
 #define pary(...)
 #define IOS cin.tie(0); ios_base::sync_with_stdio(0);
 #endif
+// roy ya hahahahahahahahahahahahahaha
 
-/* 多筆測資 
-CASET {
-    cout << cs << endl;
-}
-*/
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+signed main() { IOS
 
-signed main() {
-    for0(i, n)
 }
