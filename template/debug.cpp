@@ -1,7 +1,12 @@
 /*
 wer(a, b, ...)
+
 - vector
 werp(v)
+
+- vector array
+pary(all(v))
+pary(a, a + 5)
 */
 namespace DEBUG {
 	template<typename T> void _de(const T& t) { cerr << t; }
@@ -9,9 +14,11 @@ namespace DEBUG {
 	void _de(const pair<T1, T2> &t) { cerr << '(' << t.first << ", " << t.second << ')'; }
 
 	template<typename T>
-	void _dev(T t1, T t2) {
-		_de(*t1);
-		if(t1 != t2) _de(", "),_dev(++t1, t2);
+	void pary(T t1, T t2) {
+		cerr << "[";
+		for(auto t = t1; t != t2; _de(*t++))
+			if(t != t1) cerr << ", ";
+		cerr << "]\n";
 	}
 
 	template<typename T, typename... Args>
@@ -25,10 +32,12 @@ using namespace DEBUG;
 	_de(__VA_ARGS__);																	\
 }
 #define werp(v) if(1) {																	\
-	cerr << __PRETTY_FUNCTION__ << " - " << __LINE__ << "(" << #v << ") = [";	\
-	_dev(v.begin(), v.end() - 1); cerr << "]\n";															 				\
+	cerr << __PRETTY_FUNCTION__ << " - " << __LINE__ << "(" << #v << ") = ";			\
+	pary(v.begin(), v.end());															 				\
 }
 #else
 #define wer(...)
-#define werp(v)
+#define werp(...)
+#define pary(...)
 #endif
+
