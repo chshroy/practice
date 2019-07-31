@@ -9,7 +9,7 @@ pary(all(v))
 pary(a, a + 5)
 */
 namespace DEBUG {
-	template<typename T> void _de(const T& t) { cerr << t << '\n'; }
+	template<typename T> void _de(const T& t) { cerr << t; }
 	template<typename T1, typename T2>									// pair
 	void _de(const pair<T1, T2> &t) { cerr << '(' << t.first << ", " << t.second << ')'; }
 
@@ -29,7 +29,7 @@ namespace DEBUG {
 using namespace DEBUG;
 #define wer(...) if(1) {																\
 	cerr << __PRETTY_FUNCTION__ << " - " << __LINE__ << "(" << #__VA_ARGS__ << ") = ";	\
-	_de(__VA_ARGS__);																	\
+	_de(__VA_ARGS__, '\n');																	\
 }
 #define werp(v) if(1) {																	\
 	cerr << __PRETTY_FUNCTION__ << " - " << __LINE__ << "(" << #v << ") = ";			\
