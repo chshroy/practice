@@ -9,7 +9,7 @@ pary(all(v))
 pary(a, a + 5)
 */
 namespace DEBUG {
-	template<typename T> void _de(const T& t) { cerr << t; }
+	template<typename T> void _de(const T& t) { cerr << t << '\n'; }
 	template<typename T1, typename T2>									// pair
 	void _de(const pair<T1, T2> &t) { cerr << '(' << t.first << ", " << t.second << ')'; }
 
