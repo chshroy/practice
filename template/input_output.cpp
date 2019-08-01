@@ -10,7 +10,7 @@ ou_v(v)
 namespace input {
 	template<typename T> void re(T&& t) { cin >> t; }
 	template<typename T1, typename T2>									// pair
-	void re(pair<T1, T2> &&t) { re(t.first); re(t.second); }
+	void re(pair<T1, T2> &t) { re(t.first); re(t.second); }
 	
 	template<typename T1, typename T2>									// vector
 	void re_v(const T1 &n, vector<T2> &v) {
