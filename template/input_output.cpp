@@ -37,7 +37,7 @@ namespace output {
 
 	template<typename T, typename... Args> 
 	void ou(const T& t, const Args&... args) { ou(t); ou(' '); ou(args...); }
-};
+}
 using namespace input;
 using namespace output;
 
