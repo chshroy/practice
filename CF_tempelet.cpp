@@ -4,6 +4,7 @@
 using namespace std;
 
 #define int long long
+
 using ii = pair<int, int>;
 using ll = long long;
 using ull = unsigned long long;
@@ -23,7 +24,7 @@ using ld = long double;
 #define eb emplace_back
 #define endl '\n'
 #define INF INT_MAX
-#define CASET int ___T; cin >> ___T; for1(cs, ___T)
+#define CASET int ___T; cin >> ___T; while(___T--)
 
 namespace input {
 	template<typename T> bool re(T&& t) { return (cin >> t) ? 1 : 0; }
@@ -39,7 +40,7 @@ namespace input {
 	}
 
 	template<typename T, typename... Args>
-	void re(T&& t, Args&&... args) { re(t); re(args...); }
+	bool re(T&& t, Args&&... args) { re(t); return re(args...); }
 }
 
 namespace output {
@@ -80,11 +81,11 @@ namespace DEBUG {
 using namespace DEBUG;
 #define wer(...) if(1) {																\
 	cerr << __PRETTY_FUNCTION__ << " - " << __LINE__ << "(" << #__VA_ARGS__ << ") = ";	\
-	_de(__VA_ARGS__, '\n');																	\
+	_de(__VA_ARGS__, '\n');																\
 }
 #define werp(v) if(1) {																	\
 	cerr << __PRETTY_FUNCTION__ << " - " << __LINE__ << "(" << #v << ") = ";			\
-	pary(v.begin(), v.end());															 				\
+	pary(v.begin(), v.end());															\
 }
 #define IOS
 #else
@@ -94,6 +95,6 @@ using namespace DEBUG;
 #define IOS cin.tie(NULL); ios_base::sync_with_stdio(NULL);
 #endif
 
-signed main { IOS
-
+signed main() {
+	
 }
