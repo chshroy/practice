@@ -46,11 +46,11 @@ namespace royyaha {
 	template<typename T1, typename T2> 
 	void pr(const pair<T1, T2>& x) { 
 		cout << x.first << " " << x.second;
-    }
-    template<typename T, typename... Args> 
+	}
+	template<typename T, typename... Args> 
 	void pr(const T& x, const Args&... rest) {
-        pr(x); pr(rest...);
-    }
+		pr(x); pr(rest...);
+	}
 
 	template<typename T> void ou(const T& x) { pr(x); cout << endl; }
 	template<typename T, typename... Args>
