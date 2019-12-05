@@ -1,21 +1,18 @@
-struct DSU {
-    int p[maxn], sz[maxn];
+namespace DSU {
+	int p[maxn], sz[maxn] {};
+	void init() {
+		for(int i = 0; i < maxn; i++) p[i] = i;
+	}
 
-    DSU() {
-        for(int i = 0; i < maxn; ++i) p[i] = i, sz[i] = 1;
-    }
+	int find(int x) {
+		return x == p[x] ? x : p[x] = find(p[x]);
+	}
 
-    int find(const int &x) {
-        return x == p[x] ? x : p[x] = find(p[x]);
-    }
-
-    bool uni(int x, int y) {
-        // x, y must be parent
-		x = find(x), y = find(y);
-		if(x == y) return false;
-        if(sz[x] < sz[y]) swap(x, y);
-        p[y] = x;
-        sz[x] += sz[y];
-		return true;
-    }
-} dsu;
+	void uni(int a, int b) {
+		if(sz[a] < sz[b]) swap(a, b);
+		a = find(a), b = find(b);
+		sz[b] += sz[a];
+		p[a] = b;
+	}
+};
+using namespace DSU;
