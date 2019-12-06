@@ -52,7 +52,6 @@ namespace Segment_tree {
 
     }
 
-
     void init(int l, int r, int val) {
         L = l, R = r;
         for(int i = l; i <= r; i++) {
