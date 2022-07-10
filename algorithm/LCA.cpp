@@ -16,6 +16,7 @@ void init(int root) {
             dfs(v, u);
         }
     };
+    depth[root] = -1;
     dfs(root, root);
 }
  
